@@ -1,0 +1,55 @@
+Variables.txt
+
+System Variables - used as temp and are set  each time the game runs
+
+%bit%		used to hold the architecture of the prosesser
+			used when calling other exe's that are bit spicific
+
+%applequest_install_root%
+			Holds the current PWD of the Applequest.bat file
+			when useing do not put a \ between the var and other
+			text.
+			%applequest_install_root%\data will output something
+			like C:\AppleQuest\AppleQuest\\data
+			%applequest_install_root%data will output something
+			like C:\AppleQuest\AppleQuest\data
+
+%PATH%		Google it!
+
+%ERRORLEVEL%	outputed by some programms that can then be used to
+				make choices based on the output
+
+%saveLocation%	The location of the save file 
+				== to 
+				%applequest_install_root%saves\AQ-%charName%.save
+				At all times 
+
+Variables that need to be saves to each player - ###################
+
+%charName%		Stores the name of the player for saveing and useing
+				it in dialogue.
+
+%charPos%		Stores the location of the player on the map [WXY]
+				W = world # incrimented by 100
+				X = X value of the location on the map changed by 10
+				Y = Y value of the location on the map changed by 1
+
+%charHp%		Stored the health points of the player
+
+%charMp%		Stored the manna or Energy of the player
+				used for doing other attacks
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

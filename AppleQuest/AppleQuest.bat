@@ -9,20 +9,21 @@ Setlocal EnableDelayedExpansion
 IF "%PROCESSOR_ARCHITECTURE%"=="AMD64" (set bit=x64) else (set bit=x86)
 
 :VARS
-if %bit%==x64 (set choose=Choose64.exe) else (set choose=Choose64.exe) 
+if %bit%==x64 (set choose=Choose64.exe) else (set choose=Choose32.exe) 
 if %bit%==x64 (set editv=EditV64.exe) else (set choose=EditV32.exe)
 
 
 
 ::adds the data folder to the path so that you can just call the exe name
 for /F "delims=" %%I in ("%~dp0") do @set applequest_install_root=%%~fI
-set PATH=%applequest_install_root%\data;%applequest_install_root%\data\exe;%PATH%
+set PATH=%applequest_install_root%data;%applequest_install_root%data\exe;%PATH%
 :: !VARS! if getting a parse error.
 setlocal enabledelayedexpansion
 :menu
 :menu0
 cls
 echo Your running Win%bit%-bit
+echo Your path = %PATH%
 echo ษอออออออออออออออออออออออป
 echo บ Welcome to AppleQuest บ
 echo ฬอออออออออออออออออออออออน
@@ -50,7 +51,7 @@ set saveLocation=%applequest_install_root%saves\AQ-%charName%.save
  	for /f "tokens=* delims= " %%a in (!saveLocation!) do (
 	set %%a
 	)
-	goto :menu
+	goto :main
 ) ELSE (
  	set charName = nul
 	echo ### That character does not exist! ###
@@ -79,6 +80,7 @@ IF EXIST !saveLocation! (
 set saveLocation=saves\AQ-%charName%.save
 
 echo charName=%charName% > %saveLocation%
+
 echo charHp=100 >> %saveLocation%
 echo charMp=50 >> %saveLocation%
 
@@ -89,26 +91,47 @@ goto :menu
 
 :menu3  - ######################################################################
 
-
-
-
-
 exit
 
 :menu4  - ######################################################################
+
 exit
 
 :menu5  - ######################################################################
 SET /A die=6*%random%/32768+1 
 echo ...
-ping -n 2 0.0.0.0 >nul
+call :sleep 2
 echo ...
-ping -n 3 0.0.0.0 >nul
+call :sleep 3
 echo When I said there was nothing here I lied.
-ping -n 4 0.0.0.0 >nul
+call :sleep 4
 ECHO You rolled a %die% 
-ping -n 5 0.0.0.0 >nul
+call :sleep 5
 goto menu
 
-:main
+:: main - #######################################################################
+:main - #########################################################################
+
+
+
+exit
+
+
+
+
+
+
+
+:sleep
+ping -n %1 0.0.0.0 >nul
+goto :eof
+
+
+
+
+
+
+
+
+
 
