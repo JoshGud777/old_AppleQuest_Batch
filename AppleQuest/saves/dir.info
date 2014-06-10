@@ -1,0 +1,12 @@
+This is only used for the save data of the Char's
+in .dll form with no set command in frount of any of the varibals. 
+It will be done when the file is is loaded as the char data.
+
+Ex. charHP=152
+
+Non Ex. set charHP=152
+
+There is no need for the set because the command running this file is:
+for %%A in (filename) Do set %%A
+
+if there was two sets it would set "set" as the variba; and charHP=152 as the data for the set var.
