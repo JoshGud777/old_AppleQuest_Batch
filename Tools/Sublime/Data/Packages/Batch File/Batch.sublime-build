@@ -1,0 +1,13 @@
+{
+	"cmd": ["cmd", "/c", "start ${file_path}/${file_name}"],
+	"file_regex": "^(..[^:]*):([0-9]+):?([0-9]+)?:? (.*)$",
+	"working_dir": "${file_path}",
+
+	"variants":
+	[
+		{
+			"name": "Run",
+			"cmd": ["cmd", "/c", "start ${file_path}/${file_name}"]
+		}
+	]
+}
