@@ -39,6 +39,10 @@ Variables that need to be saves to each player - ###################
 %charMp%		Stored the manna or Energy of the player
 				used for doing other attacks
 
+%charGc% 		Gold Coins
+
+%charRs%		Ruby Strawberry
+
 
 
 
