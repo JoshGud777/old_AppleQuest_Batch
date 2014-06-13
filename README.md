@@ -15,7 +15,7 @@ How to get involved.
 So, you want to help. Well thats awesome, we’re always looking for more people to give their input. If you're looking to add a feature please submit an issue with the feature you want us to implement and we’ll try to include it into the game. Now if you're looking to help with the programming, please fork the project and edit the code there then submit a pull request to have the change included in the next update. E-mailing one of the other programmers is always a good idea as well. Please pass all ideas through the issues page before writing code for it. If you fixing code it’s fine to just submit the pull request and then talk about it. Including making code into functions so that those pieces can be used in other areas of the game.  Any edits to documentation just have to be summit as pull requests. There is no need to make a issue on them first. Can’t wait to see your contributions!
 
 
-Administrators, Moderators, Programmers, Authors, Testers and Contributors
+Administrators, Moderators, Programmers, Authors, Testers, and Contributors
 --------------------------------------------------------------------------
 
 ### Administrators

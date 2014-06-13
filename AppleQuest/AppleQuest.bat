@@ -118,6 +118,56 @@ if %charPos% LSS 600 goto :world5
 
 :world1
 call world1 %charPos%
+echo hi
+
+
+
+
+
+echo [N]orth, [S]outh, [E]ast or [W]est
+echo Room# %charPos%
+set /p choice="Which way would you like to go?: "
+
+
+goto :move%choice%
+
+:moven
+if %cgn%==0 (
+	echo Sorry you can't go that way!
+	ping -n 2 0.0.0.0 >nul
+	goto :main
+	)
+set /a charPos=%charPos% - 1
+goto main2
+
+:moves
+if %cgs%==0 (
+	echo Sorry you can't go that way!
+	ping -n 2 0.0.0.0 >nu
+	goto :main
+	)
+set /a charPos=%charPos% + 1
+goto main2
+
+:movee
+if %cge%==0 (
+	echo Sorry you can't go that way!
+	ping -n 2 0.0.0.0 >nul
+	goto :main
+	)
+set /a charPos=%charPos% + 10
+goto main2
+
+:movew
+if %cgw%==0 (
+	echo Sorry you can't go that way!
+	ping -n 2 0.0.0.0 >nul
+	goto :main
+	)
+set /a charPos=%charPos% - 10
+goto main2
+
+:main2
 
 
 goto :main
