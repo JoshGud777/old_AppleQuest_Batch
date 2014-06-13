@@ -24,13 +24,23 @@ System Variables - used as temp and are set  each time the game runs
 				%applequest_install_root%saves\AQ-%charName%.save
 				At all times 
 
+%choice%
+
+%cgn%			can go north - flags if going north is allowed
+%cgs%			can go south - flags if going south is allowed
+%cge%			can go east - flags if going east is allowed
+%cgw%			can go west - flags if going west is allowed
+
+%roomInfo%		information sent to the room your in to do things with
+
+
 Variables that need to be saves to each player - ###################
 
-%charName%		Stores the name of the player for saveing and useing
+%charName%		Stores the name of the player for saving and using
 				it in dialogue.
 
 %charPos%		Stores the location of the player on the map [WXY]
-				W = world # incrimented by 100
+				W = world # incremented by 100
 				X = X value of the location on the map changed by 10
 				Y = Y value of the location on the map changed by 1
 

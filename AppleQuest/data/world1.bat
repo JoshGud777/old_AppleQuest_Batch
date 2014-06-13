@@ -1,5 +1,15 @@
 :: Use as "call world1 [Room###] [Extra info]"
-@echo off
+:: use as "call world1 000 [Extra info]"
+set roomInfo=%2
+echo %2
+echo %roomInfo%
+echo(
+if "%2"=="die" set charPos=155
+if "%roomInfo%"=="talk" echo *** Please use who, talk is not a command. Type help for more.
+
+
+
+
 
 goto :Room%1
 goto :eof
@@ -274,7 +284,10 @@ set cgw=1
 goto :eof
 
 :Room155 $
-
+echo You are in the center of town. No one seems to be around.
+if /I "%roomInfo%"=="david" echo David - I don't want to talk!
+if /I "%roomInfo%"=="who" echo David, Anna are here.
+if /I "%roomInfo%"=="store" goto :store
 set cgn=0
 set cge=1
 set cgs=1
@@ -510,3 +523,9 @@ set cgw=0
 ::N188
 goto :eof
 
+
+:store
+set roomInfo=storeX
+echo Went to store
+pause
+goto :eof
