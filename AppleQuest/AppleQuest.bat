@@ -25,7 +25,7 @@ if %bit%==x64 (set editv=EditV64.exe) else (set choose=EditV32.exe)
 :menu0
 cls
 echo Your running Win%bit%-bit
-echo Your path = %PATH%
+::echo Your path = %PATH%
 echo(
 echo ษอออออออออออออออออออออออป
 echo บ Welcome to AppleQuest บ
@@ -118,8 +118,7 @@ if %charPos% LSS 600 goto :world5
 
 :world1
 call world1 %charPos% %roomInfo%
-if "%roomInfo%"=="store" echo There is no store here.
-
+if "%roomInfo%"=="shop" echo There is no store here.
 
 echo( 
 echo [N]orth, [S]outh, [E]ast or [W]est
@@ -193,12 +192,13 @@ goto :eof
 :help
 echo(
 echo You can say.
-echo w to go west
-echo e to go east
-echo n to go north
-echo s to go south
-echo [name] to talk to that person
-echo who to see who is in the room
+echo w - to go west
+echo e - to go east
+echo n - to go north
+echo s - to go south
+echo [name] - to talk to that person
+echo who - to see who is in the room
+echo map - pulls up the map
 echo help to see the help message
 
 echo Press any key to go back to the game...

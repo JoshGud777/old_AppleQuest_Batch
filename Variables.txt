@@ -33,6 +33,10 @@ System Variables - used as temp and are set  each time the game runs
 
 %roomInfo%		information sent to the room your in to do things with
 
+%mapXY%			used when telling your X and Y in the map.
+%mapX%			"
+%mapY%			"
+
 
 Variables that need to be saves to each player - ###################
 
