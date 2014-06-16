@@ -269,7 +269,7 @@ goto :eof
 
 :Room133
 set cgn=1
-set cge=1
+set cge=0
 set cgs=0
 set cgw=1
 ::N132
