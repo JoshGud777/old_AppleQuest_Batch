@@ -58,5 +58,18 @@ System Variables - used as temp and are set  each time the game runs
 %charRs%		Ruby Strawberry
 
 
+### - Un used right now but planned - ###
+
+%optColor%
+
+%optMoveN%
+%optMoveS%
+%optMoveE%
+%optMoveW%
+
+%optConsoleSize?1%
+%optConsoleSize?2%
+
+
 
 

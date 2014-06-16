@@ -28,15 +28,18 @@ cls
 echo Your running Win%bit%-bit
 ::echo Your path = %PATH%
 echo(
+type data\TitleImg
+echo(
+echo(
 echo ษอออออออออออออออออออออออป
 echo บ Welcome to AppleQuest บ
-echo ฬอออออออออออออออออออออออน    AA            l          QQQ                 t 
-echo บ 1. Login              บ   A  A           l         Q   Q                t 
-echo บ 2. Create a Character บ   AAAA ppp  ppp  l eee     Q   Q  u  u eee  ss ttt
-echo บ 3. Options            บ   A  A p  p p  p l e e     Q  QQ  u  u e e  s   t
-echo บ 4. Dev. Contact info  บ   A  A ppp  ppp  l ee       QQQQ   uuu ee  ss   tt 
-echo บ 5. Not actualy an     บ        p    p                   Q  
-echo บ option. Just needed   บ        p    p      
+echo ฬอออออออออออออออออออออออน
+echo บ 1. Login              บ
+echo บ 2. Create a Character บ
+echo บ 3. Options            บ
+echo บ 4. Dev. Contact info  บ
+echo บ 5. Not actualy an     บ
+echo บ option. Just needed   บ
 echo บ this to look nice. :) บ
 echo ศอออออออออออออออออออออออผ
 %choose% -c 12345 -n -p "Please select a number then press Enter: "
@@ -90,12 +93,13 @@ ping -n 5 0.0.0.0 >nul
 goto :menu1autoload
 
 :menu3  - ######################################################################
+call options menu
+goto :menu
 
-exit
 
 :menu4  - ######################################################################
-
-exit
+call :DevInfo
+goto :menu
 
 :menu5  - ######################################################################
 SET /A die=6*%random%/32768+1 
@@ -142,6 +146,8 @@ if /I %choice%==w goto :moveW
 if /I %choice%==help call :help
 if /I %choice%==save call save
 if /I %choice%==quit call :quit
+if /I %choice%==options call options ingame
+
 
 goto :main
 
@@ -211,6 +217,7 @@ echo help - - to see the help message
 echo save - - saves the player and all stats
 echo quit - - saves player then exits from the game
 echo cls- - - Clears all text other that story text in each room
+echo options- takes you to options
 echo(
 echo +++ People talking to you
 echo --- Story/flavour text
@@ -219,7 +226,6 @@ echo(
 echo Press any key to go back to the game...
 pause >nul
 goto :eof
-
 
 
 
