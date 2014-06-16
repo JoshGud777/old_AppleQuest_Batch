@@ -1,12 +1,12 @@
 :: Use as "call world1 [Room###] [Extra info]"
 :: use as "call world1 000 [Extra info]"
-set roomInfo=%2
-echo %2
-echo %roomInfo%
+::set roomInfo=%2
+:: echo %2
+:: echo %roomInfo%
 echo(
 if "%2"=="die" set charPos=155
-if "%roomInfo%"=="talk" echo *** Please use who, talk is not a command. Type help for more.
-if "%roomInfo%"=="map" goto :map
+if "%2"=="talk" echo *** Please use who, talk is not a command. Type help for more.
+if "%2"=="map" goto :map
 
 
 
@@ -98,11 +98,11 @@ if %mapXY%==49 (set map49=@) else (set map49=#)
 if %mapXY%==79 (set map79=@) else (set map79=#)
 if %mapXY%==89 (set map89=@) else (set map89=#)
 
-echo(
+::echo(
 :: if %mapXY%==XY (set mapXY=@) else (set mapXY=#)
 ::echo %mapXY%
 echo You are here: @ %mapX%, %mapY%
-echo                 
+echo(                 
 echo +  1 2 3 4 5 6 7 8 9 X
 echo 1- %map11%-%map21%   %map41%-%map51%-%map61%         
 echo      ^|   ^| ^|       
@@ -377,9 +377,9 @@ goto :eof
 
 :Room155 $
 echo You are in the center of town. No one seems to be around.
-if /I "%roomInfo%"=="david" echo David - I don't want to talk!
-if /I "%roomInfo%"=="who" echo David, Anna are here.
-if /I "%roomInfo%"=="shop" goto :shop
+if /I "%2"=="david" echo David - I don't want to talk!
+if /I "%2"=="who" echo David, Anna are here.
+if /I "%2"=="shop" goto :shop
 set cgn=0
 set cge=1
 set cgs=1

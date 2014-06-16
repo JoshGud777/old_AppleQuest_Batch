@@ -6,6 +6,7 @@
 @echo off
 Setlocal EnableDelayedExpansion
 :HEADER
+mode con:cols=80 lines=40
 IF "%PROCESSOR_ARCHITECTURE%"=="AMD64" (set bit=x64) else (set bit=x86)
 title AppleQuest
 ::adds the data folder to the path so that you can just call the exe name
@@ -117,6 +118,9 @@ if %charPos% LSS 500 goto :world4
 if %charPos% LSS 600 goto :world5
 
 :world1
+
+call world1 %charPos% map
+
 call world1 %charPos% %roomInfo%
 if "%roomInfo%"=="shop" echo There is no store here.
 
