@@ -376,9 +376,10 @@ set cgw=1
 goto :eof
 
 :Room155 $
-echo You are in the center of town. No one seems to be around.
-if /I "%2"=="david" echo David - I don't want to talk!
-if /I "%2"=="who" echo David, Anna are here.
+echo ---You are in the center of town. No one seems to be around.
+if /I "%2"=="david" echo +++David - I don't want to talk!
+if /I "%2"=="anna" echo +++David - How is anna? I'm the only one here. You ok buddy?
+if /I "%2"=="who" echo ***David, Anna are here.
 if /I "%2"=="shop" goto :shop
 set cgn=0
 set cge=1

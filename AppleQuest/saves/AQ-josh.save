@@ -1,7 +1,7 @@
 charPos=155 
-charHp=100 
-charMp=50 
-charAttMax=5 
-charAttMin=1 
-charGc=00 
-charRs=00 
+charHp=100   
+charMp=50   
+charAttMax=5   
+charAttMin=1   
+charGc=00   
+charRs=00   

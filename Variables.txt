@@ -38,7 +38,7 @@ System Variables - used as temp and are set  each time the game runs
 %mapY%			"
 
 
-Variables that need to be saves to each player - ###################
+### - Variables that need to be saves to each player - ###
 
 %charName%		Stores the name of the player for saving and using
 				it in dialogue.
@@ -56,17 +56,6 @@ Variables that need to be saves to each player - ###################
 %charGc% 		Gold Coins
 
 %charRs%		Ruby Strawberry
-
-
-
-
-
-
-
-
-
-
-
 
 
 

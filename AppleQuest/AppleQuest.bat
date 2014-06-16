@@ -47,7 +47,7 @@ goto :menu%ERRORLEVEL%
 :menu1 - ######################################################################
 echo(
 %editv% -p "Please enter your name: " charName 
-
+:menu1autoload
 set saveLocation=%applequest_install_root%saves\AQ-%charName%.save
 
  IF EXIST !saveLocation! (
@@ -65,7 +65,8 @@ set saveLocation=%applequest_install_root%saves\AQ-%charName%.save
 goto :menu
 
 :menu2 - Character Creation  - #################################################
-echo Note: This name is also you login name!
+echo(
+echo *** Note: This name is also you login name!
 
 :menu2name
 echo(
@@ -84,9 +85,9 @@ IF EXIST !saveLocation! (
 set saveLocation=saves\AQ-%charName%.save
 call save new
 echo(
-echo Returning to Menu to login. Please use the login  cridentials you made just now.
+echo Please wait while we do some important things.
 ping -n 5 0.0.0.0 >nul
-goto :menu
+goto :menu1autoload
 
 :menu3  - ######################################################################
 
@@ -140,6 +141,7 @@ if /I %choice%==w goto :moveW
 
 if /I %choice%==help call :help
 if /I %choice%==save call save
+if /I %choice%==quit call :quit
 
 goto :main
 
@@ -196,15 +198,24 @@ goto :eof
 :help
 echo(
 echo You can say.
+echo ---------------------------------------------------
 echo w - to go west
 echo e - to go east
 echo n - to go north
 echo s - to go south
+echo(
 echo [name] - to talk to that person
-echo who - to see who is in the room
-echo map - pulls up the map
-echo help to see the help message
-
+echo who- - - to see who is in the room
+echo map- - - pulls up the map
+echo help - - to see the help message
+echo save - - saves the player and all stats
+echo quit - - saves player then exits from the game
+echo cls- - - Clears all text other that story text in each room
+echo(
+echo +++ People talking to you
+echo --- Story/flavour text
+echo *** Important system information
+echo(
 echo Press any key to go back to the game...
 pause >nul
 goto :eof
@@ -212,7 +223,9 @@ goto :eof
 
 
 
-
+:quit
+call save
+exit
 
 
 
