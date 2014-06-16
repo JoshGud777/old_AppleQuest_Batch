@@ -2,6 +2,9 @@
 * text eol=crlf
 *.exe binary
 
+*.png binary
+*.jpg binary
+
 # Custom for Visual Studio
 *.cs     diff=csharp
 *.sln    merge=union
