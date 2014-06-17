@@ -231,7 +231,10 @@ goto :eof
 
 :quit
 call save
-exit
+echo(
+echo(
+set /p xChoice="Goto [M]enu or E[X]it. Defualt is Exit: "
+if /I %xChoice%==m (goto :HEADER) else (Exit)
 
 
 

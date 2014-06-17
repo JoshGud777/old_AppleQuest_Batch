@@ -4,40 +4,38 @@
 
 :main
 cls
-echo Options v1.0
-if "%1"=="menu" echo Options v1.0 - menu(
-	) Else ( if "%1"=="ingame" echo Options v1.0 - In-Game
-	)
+if "%1"=="menu" (echo Options v1.0 - menu) else (Echo Options v1.0 - ingame)
 
 echo(
-echo
-echo
-echo
-echo
-echo
-echo
-echo
-echo
-echo
-echo
-echo
-echo
-echo
-echo
-echo
-echo
-echo
-echo
-echo
-echo
-echo
-echo
-echo
-echo
-echo
-echo
-
-
+echo(
+echo(
+echo(
+echo(
+echo(
+echo(
+echo(
+echo(
+echo(
+echo(
+echo(
+echo(
+echo(
+echo(
+echo(
+echo(
+echo(
+echo(
+echo(
+echo(
+echo(
+echo(
+echo(
+echo(
+echo(
+echo(
+echo(
+echo(
+echo(
 
 :end
 echo(
